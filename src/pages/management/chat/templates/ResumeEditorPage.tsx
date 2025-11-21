@@ -7,12 +7,12 @@ import { useState, useMemo } from "react";
 
 // --- Импортируем компоненты шаблонов ---
 // Важно: убедитесь, что эти пути и файлы существуют!
-import TemplateA_Executive from './TemplateA_Executive'; 
-import TemplateB_DarkTech from './TemplateB_DarkTech'; 
 import TemplateC_Minimalist from './TemplateC_Minimalist'; 
 import { ColorSettings,MOCK_DATA, ResumeData } from "@/_mock/resume";
 import ResumeDataForm from "./ResumeDataForm";
 import { Feather, LayoutList, Zap } from "lucide-react";
+import { TemplateA_Executive } from "./TemplateA_Executive";
+import TemplateB_DarkTech from "./TemplateB_DarkTech";
 
 // --- Инициализационные данные ---
 
