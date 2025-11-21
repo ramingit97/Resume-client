@@ -9,7 +9,7 @@ services:
     networks:
       - resume-network
     ports:
-      - "3000:80"
+      - "3000:4800"
 
 networks:
   resume-network:
