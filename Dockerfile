@@ -1,5 +1,5 @@
 # Step 1 — Build
-FROM node:20-bullseye AS builder
+FROM node:20 AS builder
 
 WORKDIR /app
 
@@ -18,7 +18,7 @@ RUN pnpm build
 
 
 # Step 2 — Serve static files
-FROM node:20-bullseye
+FROM node:20
 
 WORKDIR /app
 
