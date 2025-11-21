@@ -6,6 +6,9 @@ WORKDIR /app
 # Включаем pnpm
 RUN corepack enable && corepack prepare pnpm@10.8.0 --activate
 
+# Пропускаем preinstall скрипты (lefthook)
+ENV npm_config_ignore_scripts=true
+
 # Копируем зависимости
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
@@ -28,5 +31,4 @@ RUN npm install -g serve
 COPY --from=builder /app/dist ./dist
 
 EXPOSE 4800
-
 CMD ["serve", "-s", "dist", "-l", "4800"]
