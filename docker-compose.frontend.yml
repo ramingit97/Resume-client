@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: resume-frontend
+    networks:
+      - resume-network
+    ports:
+      - "3000:80"
+
+networks:
+  resume-network:
+    external: true

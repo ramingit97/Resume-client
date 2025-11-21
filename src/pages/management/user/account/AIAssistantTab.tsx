@@ -18,7 +18,7 @@ export default function AiAssistantTab({ onGenerated }: { onGenerated: (data: an
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5004/user/parse-profile", {
+      const res = await fetch("http://localhost:resume/user/parse-profile", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ rawText: input }),
