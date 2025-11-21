@@ -9,6 +9,7 @@ import Toast from "./components/toast";
 import { GLOBAL_CONFIG } from "./global-config";
 import { AntdAdapter } from "./theme/adapter/antd.adapter";
 import { ThemeProvider } from "./theme/theme-provider";
+import { useUserInitializer } from "./hooks/useUserInitializer";
 
 if (import.meta.env.DEV) {
 	import("react-scan").then(({ scan }) => {

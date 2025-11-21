@@ -1,0 +1,22 @@
+{
+  "common": {
+    "okText": "OK",
+    "closeText": "Bağla",
+    "cancelText": "Ləğv et",
+    "loadingText": "Yüklənir...",
+    "saveText": "Yadda saxla",
+    "delText": "Sil",
+    "resetText": "Sıfırla",
+    "searchText": "Axtar",
+    "queryText": "Axtarış",
+
+    "inputText": "Zəhmət olmasa daxil edin",
+    "chooseText": "Zəhmət olmasa seçin",
+
+    "redo": "Yenilə",
+    "back": "Geri",
+
+    "light": "Aydın",
+    "dark": "Qaranlıq"
+  }
+}

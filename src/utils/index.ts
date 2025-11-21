@@ -40,3 +40,9 @@ export const urlJoin = (...parts: string[]) => {
 		.filter(Boolean);
 	return `/${result.join("/")}`;
 };
+
+const formatDate = (date: string | null) => {
+	if (!date) return 'Настоящее время';
+	return new Date(date).getFullYear() || date; 
+};
+

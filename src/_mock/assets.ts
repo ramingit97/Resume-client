@@ -543,19 +543,19 @@ export const ROLE_LIST = [ADMIN_ROLE, TEST_ROLE];
  */
 export const DEFAULT_USER = {
 	id: "b34719e1-ce46-457e-9575-99505ecee828",
-	username: "admin",
+	username: "test.user@example.com",
 	email: "admin@slash.com",
 	avatar: faker.image.avatarGitHub(),
 	createdAt: faker.date.anytime(),
 	updatedAt: faker.date.recent(),
-	password: "demo1234",
+	password: "StrongPassword123",
 	role: ADMIN_ROLE,
 	permissions: ADMIN_ROLE.permission,
 };
 export const TEST_USER = {
 	id: "efaa20ea-4dc5-47ee-a200-8a899be29494",
 	username: "test",
-	password: "demo1234",
+	password: "StrongPassword123",
 	email: "test@slash.com",
 	avatar: faker.image.avatarGitHub(),
 	createdAt: faker.date.anytime(),

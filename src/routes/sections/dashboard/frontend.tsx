@@ -49,7 +49,36 @@ export function getFrontendDashboardRoutes(): RouteObject[] {
 						{ path: "user/:id", element: Component("/pages/management/system/user/detail") },
 					],
 				},
+				
+				{
+					path: "chat",
+					children: [
+						{ index: true, element: <Navigate to="permission" replace /> },
+						{ path: "permission", element: Component("/pages/management/chat/permission") },
+						{ path: "templates", element: Component("/pages/management/chat/templates/ResumeEditorPage") },
+						{ path: "ai", element: Component("/pages/management/ai/ResumeEditorPage") },
+						{ path: "style-ai", element: Component("/pages/management/ai/AiStyleGenerate") },
+						{ path: "ai2", element: Component("/pages/management/ai/steps/AIResumeWorkflowWizard") },
+
+					],
+				},
 			],
+		},
+		{
+			path: "resume",
+			children: [
+				{ index: true, element: <Navigate to="list" replace /> },
+				{ path: "list", element: Component("/pages/management/resume/ResumeList") },
+				{ path: "add", element: Component("/pages/management/ai2/ResumeTabsPage") },
+				{ path: "view/:id", element: Component("/pages/management/ai2/ResumeTabsPage") },
+			],
+		},
+		{
+			path:"landing",
+			children:[
+				{ index: true, element: <Navigate to="list" replace /> },
+				{ path: "list", element: Component("/pages/landing/ResumeAILanding") },
+			]
 		},
 		{
 			path: "error",

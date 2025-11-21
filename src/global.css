@@ -73,7 +73,7 @@
   --popover-foreground: var(--colors-common-black);
   --primary: var(--colors-palette-primary-default);
   --primary-foreground: var(--colors-palette-primary-lighter);
-  --secondary:var(--colors-palette-gray-200);
+  --secondary: var(--colors-palette-gray-200);
   --secondary-foreground: var(--colors-palette-gray-600);
   --muted: var(--colors-palette-gray-200);
   --muted-foreground: var(--colors-palette-gray-500);
@@ -83,11 +83,14 @@
   --border: rgba(var(--colors-palette-gray-500Channel)/ var(--opacity-border));
   --input: rgba(var(--colors-palette-gray-500Channel)/ var(--opacity-border));
   --ring: var(--colors-palette-primary-default);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  
+  /* Замените oklch на RGB эквиваленты */
+  --chart-1: #f97316; /* oklch(0.646 0.222 41.116) -> оранжевый */
+  --chart-2: #06b6d4; /* oklch(0.6 0.118 184.704) -> cyan */
+  --chart-3: #3b82f6; /* oklch(0.398 0.07 227.392) -> синий */
+  --chart-4: #facc15; /* oklch(0.828 0.189 84.429) -> желтый */
+  --chart-5: #eab308; /* oklch(0.769 0.188 70.08) -> amber */
+  
   --sidebar: var(--colors-palette-gray-200);
   --sidebar-foreground: var(--colors-palette-gray-800);
   --sidebar-primary: var(--colors-palette-primary-default);

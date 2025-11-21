@@ -20,6 +20,8 @@ export default function LocalePicker() {
 		};
 	});
 
+	console.log('locale',locale)
+
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
@@ -29,7 +31,10 @@ export default function LocalePicker() {
 			</DropdownMenuTrigger>
 			<DropdownMenuContent>
 				{localeList.map((item) => (
-					<DropdownMenuItem key={item.key} onClick={() => setLocale(item.key as Locale)}>
+					<DropdownMenuItem key={item.key} onClick={(e) => {
+						console.log('eee',item)
+						setLocale(item.key as Locale)
+						}}>
 						{item.icon}
 						{item.label}
 					</DropdownMenuItem>

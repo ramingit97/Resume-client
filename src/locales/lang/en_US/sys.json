@@ -102,6 +102,7 @@
 			"permission": "Permission",
 			"permission.page_test": "Page Permission Test",
 			"management": "Management",
+			"resume":"Resume",
 			"markdown": "Markdown",
 			"menulevel": {
 				"1a": "Menu Level 1a",
@@ -161,6 +162,16 @@
 			"closeRight": "Close Right",
 			"fullscreen": "FullScreen",
 			"refresh": "Refresh"
+		},
+		"resume":{
+			"list":"List",
+			"add":"Add",
+			"tabs": {
+				"editorPreview": "Editor & Preview",
+				"aiParser": "AI Parser",
+				"aiGenerator": "AI Resume Generator",
+				"benchmark": "Best Resume Comparison"
+			}
 		}
 	}
 }

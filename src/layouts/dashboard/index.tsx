@@ -5,9 +5,24 @@ import { ThemeLayout } from "#/enum";
 import Header from "./header";
 import Main from "./main";
 import { NavHorizontalLayout, NavMobileLayout, NavVerticalLayout, useFilteredNavData } from "./nav";
+import { useMe } from "@/hooks/useMe";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 export default function DashboardLayout() {
 	const isMobile = useMediaQuery(down("md"));
+	const { data: user, isLoading } = useMe();
+
+	const navigate = useNavigate(); 
+
+	if (isLoading) return <div>Loading...</div>; 
+
+	// useEffect(() => {
+   
+  //   if (user && !isLoading) {
+  //     // navigate('/resume/list'); 
+  //   }
+  // }, [user, isLoading, navigate]);
 
 	return (
 		<div data-slot="slash-layout-root" className="w-full min-h-screen bg-background">

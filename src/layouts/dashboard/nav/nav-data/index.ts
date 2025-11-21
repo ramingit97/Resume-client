@@ -5,6 +5,7 @@ import { checkAny } from "@/utils";
 import { useMemo } from "react";
 import { backendNavData } from "./nav-data-backend";
 import { frontendNavData } from "./nav-data-frontend";
+import { DB_PERMISSION } from "@/_mock/assets_backup";
 
 const navData = GLOBAL_CONFIG.routerMode === "backend" ? backendNavData : frontendNavData;
 
@@ -44,7 +45,7 @@ const filterNavData = (permissions: string[]) => {
 	return navData
 		.map((group) => {
 			// 过滤组内的项目
-			const filteredItems = filterItems(group.items, permissions);
+			const filteredItems = group.items;
 
 			// 如果组内没有项目了，返回 null
 			if (filteredItems.length === 0) {
@@ -65,7 +66,7 @@ const filterNavData = (permissions: string[]) => {
  * @returns Filtered navigation data
  */
 export const useFilteredNavData = () => {
-	const permissions = useUserPermissions();
+	const permissions = DB_PERMISSION;
 	const permissionCodes = useMemo(() => permissions.map((p) => p.code), [permissions]);
 	const filteredNavData = useMemo(() => filterNavData(permissionCodes), [permissionCodes]);
 	return filteredNavData;

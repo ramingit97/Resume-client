@@ -41,10 +41,10 @@ const Main = () => {
 					"flex-auto w-full flex flex-col",
 					"transition-[max-width] duration-300 ease-in-out",
 					"px-4 sm:px-6 py-4 sm:py-6 md:px-8 mx-auto",
-					{
-						"max-w-full": themeStretch,
-						"xl:max-w-screen-xl": !themeStretch,
-					},
+					// {
+					// 	"max-w-full": themeStretch,
+					// 	"xl:max-w-screen-xl": !themeStretch,
+					// },
 				)}
 				style={{
 					willChange: "max-width",

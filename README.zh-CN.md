@@ -2,7 +2,7 @@
 <br> 
 <br>
 <img src="./src/assets/icons/ic-logo-badge.svg" color="green" height="140" />
-<h3> Slash Admin </h3>
+<h3> Resume AI </h3>
   <p>
     <p style="font-size: 14px">
       Slash Admin 是一款现代化的后台管理模板，基于 React 19、Vite、shadcn/ui 和 TypeScript 构建。它旨在帮助开发人员快速搭建功能强大的后台管理系统。

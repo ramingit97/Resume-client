@@ -12,7 +12,14 @@ import ProjectsTab from "./projects-tab";
 import TeamsTab from "./teams-tab";
 
 function UserProfile() {
-	const { avatar, username } = useUserInfo();
+
+
+	const data = useUserInfo();
+
+	console.log('data',data);
+
+	const avatar = data.avatar;
+	const username = data.username;
 
 	const bgStyle: CSSProperties = {
 		position: "absolute",

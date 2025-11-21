@@ -1,6 +1,8 @@
 import "dayjs/locale/zh-cn";
 import en_US from "antd/locale/en_US";
-import zh_CN from "antd/locale/zh_CN";
+import az_AZ from "antd/locale/az_AZ";
+import ru_RU from "antd/locale/ru_RU"
+
 import dayjs from "dayjs";
 import { useTranslation } from "react-i18next";
 
@@ -16,17 +18,23 @@ type Language = {
 };
 
 export const LANGUAGE_MAP: Record<Locale, Language> = {
-	[LocalEnum.zh_CN]: {
-		locale: LocalEnum.zh_CN,
-		label: "Chinese",
-		icon: "flag-cn",
-		antdLocal: zh_CN,
-	},
 	[LocalEnum.en_US]: {
 		locale: LocalEnum.en_US,
 		label: "English",
 		icon: "flag-us",
 		antdLocal: en_US,
+	},
+	[LocalEnum.az_AZ]: {
+		locale: LocalEnum.az_AZ,
+		label: "Azerbaijani",
+		icon: "flag-az",
+		antdLocal: az_AZ,
+	},
+	[LocalEnum.ru_RU]: {
+		locale: LocalEnum.ru_RU,
+		label: "Russian",
+		icon: "flag-ru",
+		antdLocal: ru_RU,
 	},
 };
 
@@ -40,12 +48,14 @@ export default function useLocale() {
 	 * localstorage -> i18nextLng change
 	 */
 	const setLocale = (locale: Locale) => {
+		console.log('locale123123',locale)
 		i18n.changeLanguage(locale);
 		// set lang ant dayjs
 		document.documentElement.lang = locale;
 		dayjs.locale(locale);
 	};
 
+	
 	return {
 		t,
 		locale,
