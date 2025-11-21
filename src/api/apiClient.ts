@@ -29,7 +29,7 @@ function getAccessTokenFromStorage(): string | undefined {
 }
 
 const axiosInstance = axios.create({
-  baseURL: "http://resume:5004",
+  baseURL: "http://16.171.6.163:5004/",
   timeout: 50000,
   headers: { "Content-Type": "application/json;charset=utf-8" },
 });

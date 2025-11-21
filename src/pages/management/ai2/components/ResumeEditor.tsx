@@ -87,7 +87,7 @@ export function ResumeEditor({
     const formData = new FormData();
     formData.append("file", resBlob, "resume.png");
 
-    const res = await fetch("http://resume:5004/pdf", {
+    const res = await fetch("http://16.171.6.163:5004/pdf", {
       method: "POST",
       body: formData,
     });
